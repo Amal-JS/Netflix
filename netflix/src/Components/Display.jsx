@@ -1,7 +1,9 @@
 import {React ,useState} from 'react'
 import {imageUrl} from '../API/api'
-import './Display.css'
+
 import YouTubePlay from './YoutubePlay';
+
+
 const Display = ({ movieImgUrl, movieId }) => {
     const [playVideo, setPlayVideo] = useState(false);
   

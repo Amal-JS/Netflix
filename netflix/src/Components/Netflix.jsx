@@ -2,31 +2,14 @@ import {React, useState} from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import Row from './Row'
+//urls for getting the movie data
 import {action,comedy,horror,animation} from '../API/url'
 
 const Netflix =()=>{
 
-  
-
-    // async function call () {
-    //     const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`;
-
-    //     const get = await fetch(apiUrl)
-    //     const json = await get.json()
-
-    //     set(json.results[0].key)
-    // }
-
-
-
-    // call()
-    
-
-
     return(
         <div >
-
-
+            {/* header component */}
         <Header />
       
         <div className=' m-5'>
@@ -38,10 +21,8 @@ const Netflix =()=>{
 
         
         </div>
+        {/* footer component */}
         <Footer />
-
-
-        
 
         </div>
     )

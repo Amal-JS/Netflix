@@ -4,6 +4,9 @@ const Header =()=>{
 
 
     return(
+
+        //static data 
+        
        <div className='w-full bg-black p-3 my-4 '>
         <div className='flex justify-between'>
             <div className='flex items-center'>
