@@ -15,7 +15,7 @@ useEffect(()=>{
         const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`;
         
         const data = await fetch(apiUrl)
-        const json = await get.json()
+        const json = await data.json()
         setVideoId(json.results[0].key)
         
     }
@@ -40,7 +40,7 @@ const opts = {
 
   return (
     <div  className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-5' style={{ zIndex: 9999 }} onMouseLeave={onStopVideo}>
-      
+     
       <YouTube videoId={videoId} opts={opts}  />
     </div>
   );
