@@ -1,8 +1,8 @@
 import {React ,useState} from 'react'
-import {imageUrl} from '../API/api'
-// for playing the youtube video
-import YouTubePlay from './YoutubePlay';
 
+// for playing the youtube video
+
+import './Display.css'
 
 const Display = ({ movieImgUrl, movieId }) => {
 
@@ -15,7 +15,7 @@ const Display = ({ movieImgUrl, movieId }) => {
   
     return (
       <div
-        className='p-3 bg-black m-2 w-72 relative'
+        className=' bg-black  grow-on-hover w-10/1 '
         //stop video
         onMouseLeave={handleStopVideo}
         //play video

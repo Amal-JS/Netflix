@@ -1,0 +1,20 @@
+.posters::-webkit-scrollbar{
+    display: none;
+    
+}
+
+
+.grow-on-hover {
+
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Add a smooth transition for a better visual effect */
+}
+
+.grow-on-hover:hover {
+    transform: scale(1.1); /* Scale the div to 110% on hover */
+    margin: -2px; /* Move the div 2px in the opposite direction to compensate for the scale */
+}

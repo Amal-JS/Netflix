@@ -12,7 +12,7 @@ const Netflix =()=>{
             {/* header component */}
         <Header />
       
-        <div className=' m-5'>
+        <div className=' m-3'>
 
         <Row moviesType={'Action'} genre={action}/>
         <Row moviesType={'Comedy'} genre={comedy}/>
