@@ -53,13 +53,14 @@ const Row = ({ moviesType, genre }) => {
     }, [])
 
 
+    //fetching youtube video id for playing the trailer
     const handleOnClick =(id)=>{
         
         axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`)
         .then((response)=>{
 
             setVideoId(response.data.results[0].key)
-            console.log(response.data.results[0].key)
+            // console.log(response.data.results[0].key)
             setPlayVideo(true)
         })
         .catch((err)=>{
@@ -80,19 +81,20 @@ const Row = ({ moviesType, genre }) => {
 
         <div className=' '>
             <p className='text-2xl text-gray-200 px-12 mt-3'>{moviesType} Movies</p>
-            <div className=' p-3 bg-black m-2    flex  overflow-x-scroll posters' style={{width:'4000px'}}>
+            <div className=' p-3 bg-black m-2    flex  overflow-x-scroll posters' >
 
                 {
                     movies.map(data => {
                         
                         
-                                        // passing the image url and movie id 
+                                        // passing the image url 
                         return (
 
                             <div
                              key={data.id}
-                             className=' bg-black  grow-on-hover  mx-2 w-vh'
-                            //play video
+                             className=' bg-black  grow-on-hover  mx-2 '
+                             style={{minWidth:'200px'}}
+                            //play video , passing the id of movie
                             onClick={()=>{
                                 handleOnClick(data.id)
                             }} >
@@ -106,7 +108,7 @@ const Row = ({ moviesType, genre }) => {
 
                             { playVideo && (
 
-                                <div className='w-100vh bg-white' style={{height:'400px'}}
+                                <div className='w-80vh bg-black p-3' style={{height:'400px'}}
                                 //stop video
                                 onMouseLeave={handleStopVideo}>
                                 
