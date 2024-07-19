@@ -53,7 +53,7 @@ const Row = ({ moviesType, genre }) => {
     }, [])
 
 
-    //fetching youtube video id for playing the trailer
+   //fetching youtube video id for playing the trailer
     const handleOnClick =(id)=>{
         
         axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`)
